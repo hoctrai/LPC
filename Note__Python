@@ -1,0 +1,69 @@
+------------Datbase postgresql --------------
+document (tutorial)https://www.postgresqltutorial.com/
+
+------------ MVC pattenrn -------------------
+Document (tutorial)
+            - https://www.giacomodebidda.com/mvc-pattern-in-python-introduction-and-basicmodel/
+            - https://www.tutorialspoint.com/python_design_patterns/python_design_patterns_model_view_controller.htm
+------------Python lib modul------------------------------
+
+C:\Users\nguye\PycharmProjects\untitled\venv\Scripts\python.exe C:/Users/nguye/PycharmProjects/untitled/main/DataFromWeb.py
+
+Connecting to the PostgreSQL database...
+PostgreSQL database version:
+('PostgreSQL 11.8, compiled by Visual C++ build 1914, 64-bit',)
+
+Connecting to the PostgreSQL database...
+PostgreSQL database version:
+('PostgreSQL 11.8, compiled by Visual C++ build 1914, 64-bit',)
+
+
+C:/Users/nguye/PycharmProjects/untitled/main/DataFromWeb.py:151: GuessedAtParserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+The code that caused this warning is on line 151 of the file C:/Users/nguye/PycharmProjects/untitled/main/DataFromWeb.py. To get rid of this warning, pass the additional argument 'features="html.parser"' to the BeautifulSoup constructor.
+
+  soup = BeautifulSoup(content)
+Data have been gotten in %s 2020-06-10
+Data have been gotten in %s 2017-09-14
+xo-so-truyen-thong
+
+C:/Users/nguye/PycharmProjects/untitled/main/DataFromWeb.py:61: GuessedAtParserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+The code that caused this warning is on line 61 of the file C:/Users/nguye/PycharmProjects/untitled/main/DataFromWeb.py. To get rid of this warning, pass the additional argument 'features="html.parser"' to the BeautifulSoup constructor.
+
+  soup = BeautifulSoup(content)
+xo-so-da-nang
+
+05-04-2017khanh-hoa
+xo-so-khanh-hoa
+
+
+
+
+    Province Local     Parrot Days Lose  Win Total Ar.Length   Prob Profit1
+0         TT    B1         UP    1  174  203   377        50  0.538    1247
+1         TT    B1         UP    2   88   82   170        50  0.482    -382
+2         TT    B1         UP    3   32   41    73        50  0.562     409
+3         TT    B1         UP    4   20   20    40        50    0.5     -20
+4         TT    B1         UP    5    7   12    19        50  0.632     238
+..       ...   ...        ...  ...  ...  ...   ...       ...    ...     ...
+170       TT    B4   EO or OE    3   38   34    72        50  0.472    -234
+171       TT    B4   EO or OE    4   16   18    34        50  0.529      82
+172       TT    B4   EO or OE    5   11    7    18        50  0.389    -207
+173       TT    B4   EO or OE    6    3    4     7        50  0.571      46
+174       TT    B4   EO or OE    7    4    0     4        50    0.0    -200
+
+29-01-2020can-tho
+xo-so-can-tho
+
+
+Process finished with exit code 0
+
+
+
+echo "# LPC" >> README.md
+git init
+git add *
+git commit -m "first commit"
+git remote add origin https://github.com/hoctrai/LPC.git
+git push -u origin master
