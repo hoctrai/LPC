@@ -2,14 +2,12 @@ from main import Connect
 import unidecode
 
 
-class Main_Bridge():
-    db = object()
-    cur = object()
+class Main_Bridge:
+    # db = object()
+    # cur = object()
 
     def __init__(self):
         self.db = Connect.DB_connection()
-        # self.db.connect();
-        # self.cur =
         print()
 
     # def get_table(self, province):
@@ -31,5 +29,5 @@ class Main_Bridge():
         return ldb
     def getData(self, province, start_day, delta_day, type):
         print()
-run = Main_Bridge()
-run.get_table('truyen-thong')
+# run = Main_Bridge()
+# run.get_table('truyen-thong')

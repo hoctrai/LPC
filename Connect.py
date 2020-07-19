@@ -4,6 +4,7 @@ import psycopg2
 from django.db import transaction, DatabaseError
 from configparser import ConfigParser
 
+
 def config(filename, section):
     # create a parser
     parser = ConfigParser()
@@ -21,8 +22,8 @@ def config(filename, section):
 
     return db
 
-class DB_connection:
 
+class DB_connection:
     params = ''
     conn = ''
     cur = ''
@@ -68,7 +69,8 @@ class DB_connection:
         self.cur.close()
         if self.conn is not None:
             self.conn.close()
-    def insert_lpc_list(self,lpc_list):
+
+    def insert_lpc_list(self, lpc_list):
         """ insert multiple vendors into the vendors table  """
         sql = "INSERT INTO lpc(Province, Date, Type, is_print, value) VALUES(%s)"
         # conn = None
@@ -84,7 +86,7 @@ class DB_connection:
         #     if conn is not None:
         #         conn.close()
 
-    def insert_lpc(self,Province, Date, Type, is_print, value):
+    def insert_lpc(self, Province, Date, Type, is_print, value):
         """ insert a new vendor into the vendors table """
         sql = """INSERT INTO lpc(province, date, type, is_print, value)
                  VALUES(%s,%s,%s,%s,%s) RETURNING id;"""
@@ -93,7 +95,7 @@ class DB_connection:
         try:
 
             # execute the INSERT statement
-            self.cur.execute(sql, [Province, Date, Type, is_print, value,])
+            self.cur.execute(sql, [Province, Date, Type, is_print, value, ])
             # get the generated id back
             id = self.cur.fetchone()[0]
             # commit the changes to the database
@@ -106,7 +108,8 @@ class DB_connection:
         #     self.close_memory()
 
         return id
-    def is_none_exist_lpc(self, province, date,type, value):
+
+    def is_none_exist_lpc(self, province, date, type, value):
         """
 
         :type type: object
@@ -119,7 +122,7 @@ class DB_connection:
                         lpc.date = %s AND 
                         lpc.type = %s AND 
                         lpc.value = %s """
-        self.cur.execute(sql,[province, date, type, value])
+        self.cur.execute(sql, [province, date, type, value])
         if self.cur.rowcount == 0:
             return True
         elif self.cur.rowcount == 1:
@@ -135,15 +138,6 @@ class DB_connection:
 
     def display(self):
         self.connect()
-        # sql =   """
-        #                 SELECT date, type, value
-        #                 FROM lpc
-        #                 WHERE lpc.province = %s;
-        #         """
-        # self.cur.execute(sql,['truyen-thong'])
-        # print()
 #
-run = DB_connection()
+# run = DB_connection()
 # run.display()
-
-

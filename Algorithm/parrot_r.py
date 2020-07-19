@@ -23,7 +23,7 @@ class parrot_r:
     row_data = 0
     # column_data = 0
 
-    def __init__(self, TS, HS, G1):
+    def __init__(self, HS, TS, G1):
         self.TS = TS
         self.HS = HS
         self.G1 = G1
@@ -31,8 +31,8 @@ class parrot_r:
         self.all = np.transpose(np.asarray([self.TS, self.HS, self.G1]))
 
 
-    def __init__(self):
-        print()
+    # def __init__(self):
+    #     print()
 
     def readFile(self):
         # data = BridgingDatabaseToAlgorithmStrategy.Main_Bridge()
@@ -383,9 +383,9 @@ class parrot_r:
             print(table)
 
     def display(self):
-        self.readFile()
+        # self.readFile()
         self.getQueue()
 
 
-run = parrot_r()
-run.display()
+# run = parrot_r()
+# run.display()

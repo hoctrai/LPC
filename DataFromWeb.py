@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from main import Connect
 import unidecode
+import schedule
 
 
 class Web_S():
