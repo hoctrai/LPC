@@ -1,5 +1,5 @@
 from main import Connect
-from main.Algorithm import Parrot_r, N1_01_GL_find, N1_02_UP4_find, N3_01_GL_find, N3_02_UP4_find
+from main.Algorithm import Parrot_r, N1_01_GL_find, N1_02_UP4_find, N3_01_GL_find, N3_02_UP4_find, B4_01_GL_find
 from datetime import date, timedelta
 import numpy as np
 
@@ -32,7 +32,7 @@ class Algorithm():
                     FROM lpc
                     WHERE   lpc.province = %s
                 """
-        self.db.get_cur().execute(sql, ['ho-chi-minh'])
+        self.db.get_cur().execute(sql, ['truyen-thong'])
         self.db_table = self.db.get_cur().fetchall()
         # return ldb
     def get_sub_data(self, str_type):
@@ -68,12 +68,14 @@ class Algorithm():
         elif algorithm == '4':
             algor = N3_01_GL_find.N3_01_GL(self.data_per_date, self.count_list_in_arr)
             algor.display()
-        elif algorithm == '5':
-            algor = N3_02_UP4_find.N3_02_UP4(self.rs_1)
+        # elif algorithm == '5':
+        #     algor = N3_02_UP4_find.N3_02_UP4(self.rs_1)
+        #     algor.display()
+        # elif algorithm == '6':
+        #     algor = N4_01_GL_find.N4_01_GL(self.rs_1)
+        #     algor.display()
+        elif algorithm =='7':
+            algor = B4_01_GL_find.B4_01_GL(self.data_per_date, self.count_list_in_arr)
             algor.display()
-        elif algorithm == '6':
-            algor = N4_01_GL_find.N4_01_GL(self.rs_1)
-            algor.display()
-
 run = Algorithm()
 run.run()

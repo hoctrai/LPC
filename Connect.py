@@ -129,9 +129,17 @@ class DB_connection:
             print("Data have been gotten in %s", str(date))
             return False
         elif self.cur.rowcount > 1:
-            print("there are dulicate in database ")
+            print("there are dulicate data in database ")
             return False
         return True
+
+    def rollback(self, province, date):
+        sql = """ DELETE FROM lpc 
+                    WHERE 
+                        lpc.province = %s AND
+                        lpc.date = %s """
+        self.cur.execute(sql, [province, date])
+        self.conn.commit()
 
     def get_cur(self):
         return self.cur

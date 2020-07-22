@@ -1,10 +1,11 @@
 from datetime import date, timedelta
 from selenium import webdriver
 from bs4 import BeautifulSoup
+
 import pandas as pd
 from main import Connect
 import unidecode
-import schedule
+# import schedule
 
 
 class Web_S():
@@ -46,8 +47,9 @@ class Web_S():
             print('there are issues')
 
     def display(self):
+        # schedule.every().day.at("16:10").do(self.setStation,'')
         self.setStation()
-        self.driver.close()
+        # self.driver.close()
 
 
 # (self.driver.page_source, self.db)
@@ -113,9 +115,11 @@ class South_Translation_Datas:
                     # listDates.append(date.strftime("%d-%m-%Y"))
 
                 else:
-                    return timedelta(days=1000)
+                    return timedelta(days=1000000000)
             except:
                 print(str(date_time.strftime("%d-%m-%Y")) + province)
+                db.rollback(date_time)
+                return timedelta(days=1000000000)
 
         return timedelta(days=7)
 

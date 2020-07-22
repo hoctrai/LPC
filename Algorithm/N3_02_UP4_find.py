@@ -88,6 +88,6 @@ class N3_02_UP4:
         
         
        
-run = N3_02_UP4()
+# run = N3_02_UP4()
 
-run.display()
+# run.display()
